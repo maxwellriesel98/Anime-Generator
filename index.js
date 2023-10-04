@@ -21,6 +21,7 @@ function parseRequest(genre,ageRating,animeType,score){
     }
     if(score !== ""){
         requestUrl+="&min_score="+score;
+        requestUrl+="&max_score="+(Math.floor(score) + .99)
     }
     if(genre !== ""){
         requestUrl+="&type="+animeType;
